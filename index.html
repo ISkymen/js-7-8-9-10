@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel-core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <meta charset="UTF-8">
+    <title>JS 7, 8, 9, 10</title>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="menu">
+
+    </nav>
+    <div class="tabs">
+        <ul class="tabs__title">
+            <li><a class="tabs__link" href="#tabs-1">Императорский пингвин</a></li>
+            <li><a class="tabs__link" href="#tabs-2">Пингвин-скалолаз</a></li>
+            <li><a class="tabs__link" href="#tabs-3">Белокрылый пингвин</a></li>
+        </ul>
+        <div class="tabs__content">
+            <div id="tabs-1">
+                <img src="images/pin1.jpg" alt="">
+                <p>Императорский пингвин — самый крупный и тяжёлый из современных видов семейства пингвиновых. В среднем рост составляет около 122 см, а вес колеблется между 22 и 45 кг. Голова и задняя часть тела черная, брюшная часть — белая, к верху становящаяся жёлтой. Как и все пингвиновые, императорские пингвины не умеют летать. Вместе с королевским пингвином относится к роду императорских пингвинов.</p>
+            </div>
+            <div id="tabs-2">
+                <img src="images/pin2.jpg" alt="">
+                <p>Пингвин-скалолаз (хохлатый) — птица семейства пингвиновые. Длина пингвина составляет 55-62 см, масса от 2 до 3 кг (в среднем 2,3 – 2,7 кг), с узкими желтыми «бровями», оканчивающимися кисточками. Распространён на островах Субантарктики, на Тасмании и Огненной Земле. А также обитает на материковом побережье Южной Америки. Это самые северные из всех пингвинов, населяющих субантарктическую зону.</p>
+            </div>
+            <div id="tabs-3">
+                <img src="images/pin3.jpg" alt="">
+                <p>Белокрылый пингвин — это небольшой пингвин. В длину он достигает примерно 30 см, весит до полутора кг. Своё английское название «white-flippered penguin» («белоластый пингвин») получил за белые отметины на ластах, уникальные для этого подвида. Гнездится только на полуострове Банкс и острове Мотунау. Оба места гнездования расположены недалеко от города Крайстчёрч, это Южный остров Новой Зеландии.</p>
+            </div>
+        </div>
+    </div>
+    <form class="form">
+        <fieldset>
+            <div>
+                <label for="firstname">Firstname</label>
+                <input id="firstname" class="form__input" name="firstname" title="Please provide your firstname.">
+            </div>
+            <div>
+                <label for="lastname">Lastname</label>
+                <input id="lastname" class="form__input" name="lastname" title="Please provide also your lastname.">
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input id="address" class="form__input" name="address" title="Your home or work address.">
+            </div>
+        </fieldset>
+    </form>
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="images/01.jpg" alt="" width="800px" height="450px"></li>
+                <li><img src="images/02.jpg" alt="" width="800px" height="450px"></li>
+                <li><img src="images/03.jpg" alt="" width="800px" height="450px"></li>
+            </ul>
+        </div>
+        <a class="jcarousel-prev" href="#">‹</a>
+        <a class="jcarousel-next" href="#">›</a>
+    </div>
+</div>
+</body>
+</html>
