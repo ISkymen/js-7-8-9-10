@@ -7,15 +7,47 @@
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel-core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script defer src="js/icheck.min.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="UTF-8">
     <title>JS 7, 8, 9, 10</title>
 </head>
 <body>
 <div class="wrapper">
-    <nav class="menu">
-
-    </nav>
+    <ul class="menu">
+        <li class="menu_item"><a href="#">Nav 1</a></li>
+        <li class="menu_item"><a href="#">Nav 2</a></li>
+        <li class="menu_item expanded">
+            <a href="#">Nav 3</a>
+            <ul class="submenu">
+                <li><a href="#">Nav 3.1</a></li>
+                <li><a href="#">Nav 3.2</a></li>
+                <li><a href="#">Nav 3.3</a></li>
+                <li class="submenu_item">
+                    <a href="#">Nav 3.4</a>
+                    <ul class="submenu">
+                        <li><a href="#">Nav 3.4.1</a></li>
+                        <li class="submenu_item">
+                            <a href="#">Nav 3.4.2</a>
+                            <ul class="submenu">
+                                <li><a href="#">Nav 3.4.2.1</a></li>
+                                <li><a href="#">Nav 3.4.2.2</a></li>
+                                <li><a href="#">Nav 3.4.2.3</a></li>
+                                <li><a href="#">Nav 3.4.2.3</a></li>
+                                <li><a href="#">Nav 3.4.2.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Nav 3.4.3</a></li>
+                        <li><a href="#">Nav 3.4.4</a></li>
+                        <li><a href="#">Nav 3.4.5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nav 3.5</a></li>
+            </ul>
+        </li>
+        <li class="menu_item"><a href="#">Nav 4</a></li>
+        <li class="menu_item"><a href="#">Nav 5</a></li>
+    </ul>
     <div class="tabs">
         <ul class="tabs__title">
             <li><a class="tabs__link" href="#tabs-1">Императорский пингвин</a></li>
@@ -25,15 +57,26 @@
         <div class="tabs__content">
             <div id="tabs-1">
                 <img src="images/pin1.jpg" alt="">
-                <p>Императорский пингвин — самый крупный и тяжёлый из современных видов семейства пингвиновых. В среднем рост составляет около 122 см, а вес колеблется между 22 и 45 кг. Голова и задняя часть тела черная, брюшная часть — белая, к верху становящаяся жёлтой. Как и все пингвиновые, императорские пингвины не умеют летать. Вместе с королевским пингвином относится к роду императорских пингвинов.</p>
+                <p>Императорский пингвин — самый крупный и тяжёлый из современных видов семейства пингвиновых. В среднем
+                    рост составляет около 122 см, а вес колеблется между 22 и 45 кг. Голова и задняя часть тела черная,
+                    брюшная часть — белая, к верху становящаяся жёлтой. Как и все пингвиновые, императорские пингвины не
+                    умеют летать. Вместе с королевским пингвином относится к роду императорских пингвинов.</p>
             </div>
             <div id="tabs-2">
                 <img src="images/pin2.jpg" alt="">
-                <p>Пингвин-скалолаз (хохлатый) — птица семейства пингвиновые. Длина пингвина составляет 55-62 см, масса от 2 до 3 кг (в среднем 2,3 – 2,7 кг), с узкими желтыми «бровями», оканчивающимися кисточками. Распространён на островах Субантарктики, на Тасмании и Огненной Земле. А также обитает на материковом побережье Южной Америки. Это самые северные из всех пингвинов, населяющих субантарктическую зону.</p>
+                <p>Пингвин-скалолаз (хохлатый) — птица семейства пингвиновые. Длина пингвина составляет 55-62 см, масса
+                    от 2 до 3 кг (в среднем 2,3 – 2,7 кг), с узкими желтыми «бровями», оканчивающимися кисточками.
+                    Распространён на островах Субантарктики, на Тасмании и Огненной Земле. А также обитает на
+                    материковом побережье Южной Америки. Это самые северные из всех пингвинов, населяющих
+                    субантарктическую зону.</p>
             </div>
             <div id="tabs-3">
                 <img src="images/pin3.jpg" alt="">
-                <p>Белокрылый пингвин — это небольшой пингвин. В длину он достигает примерно 30 см, весит до полутора кг. Своё английское название «white-flippered penguin» («белоластый пингвин») получил за белые отметины на ластах, уникальные для этого подвида. Гнездится только на полуострове Банкс и острове Мотунау. Оба места гнездования расположены недалеко от города Крайстчёрч, это Южный остров Новой Зеландии.</p>
+                <p>Белокрылый пингвин — это небольшой пингвин. В длину он достигает примерно 30 см, весит до полутора
+                    кг. Своё английское название «white-flippered penguin» («белоластый пингвин») получил за белые
+                    отметины на ластах, уникальные для этого подвида. Гнездится только на полуострове Банкс и острове
+                    Мотунау. Оба места гнездования расположены недалеко от города Крайстчёрч, это Южный остров Новой
+                    Зеландии.</p>
             </div>
         </div>
     </div>
@@ -53,6 +96,123 @@
             </div>
         </fieldset>
     </form>
+    <form class="select-and-checkbox">
+        <select class="my-select">
+            <optgroup label="Алкогольные напитки">
+                <option value="1722">-Виски / Ром</option>
+                <option value="560">-Коньяки / Бренди</option>
+                <option value="1123">-Водка</option>
+                <option value="589">-Вино / Шампанское</option>
+                <option value="1725">-Вермуты / Ликеры</option>
+                <option value="96">-Слабоалкогольные напитки</option>
+                <option value="270">-Пиво</option>
+            </optgroup>
+            <optgroup label="Безалкогольные напитки">
+                <option value="912" selected="selected">-Вода минеральная</option>
+                <option value="52">-Газированные напитки</option>
+                <option value="1721">-Соки / Нектары</option>
+                <option value="213">-Энергетики</option>
+                <option value="441">-Сиропы / Концентраты</option>
+                <option value="623">-Чай</option>
+                <option value="536">-Кофе</option>
+            </optgroup>
+            <optgroup label="Молочные продукты">
+                <option value="553">-Молоко / Сливки</option>
+                <option value="614">-Кисломолочные продукты</option>
+                <option value="80">-Йогурты / Десерты</option>
+                <option value="771">-Творог / Сырки</option>
+                <option value="244">-Твердые / плавленые сыры</option>
+                <option value="746">-Масло сливочное</option>
+                <option value="11">-Мороженое</option>
+                <option value="1744">-Сгущенное молоко / сливки</option>
+            </optgroup>
+            <optgroup label="Бакалея / Приправы / Соусы">
+                <option value="546">-Макаронные изделия</option>
+                <option value="647">-Мука / Крупы / Сахар</option>
+                <option value="1745">-Сухие приправы и специи</option>
+                <option value="1746">-Сода / Уксус</option>
+                <option value="1719">-Масло растительное</option>
+                <option value="39">-Майонезы</option>
+                <option value="38">-Соусы / Кетчупы</option>
+                <option value="802">-Горчица / Хрен</option>
+            </optgroup>
+            <optgroup label="Полуфабрикаты / Концентраты">
+                <option value="1759">-Концентрированные овощи</option>
+                <option value="1754">-Замороженные овощи</option>
+                <option value="1755">-Пельмени / Вареники</option>
+                <option value="1756">-Супы / Пюре / Вермишель</option>
+                <option value="1757">-Блины / Мучные смеси</option>
+            </optgroup>
+            <optgroup label="Снековая продукция">
+                <option value="68">-Чипсы</option>
+                <option value="314">-Сухарики / Крекеры</option>
+                <option value="1760">-Сырные снеки</option>
+                <option value="1733">-Сушеные морепродукты</option>
+                <option value="1732">-Семечки / Орехи</option>
+            </optgroup>
+            <optgroup label="Мясо / Птица / Яйца">
+                <option value="1758">-Сырое мясо и птица</option>
+                <option value="330">-Мясная продукция</option>
+                <option value="329">-Колбасы</option>
+                <option value="679">-Яйца</option>
+            </optgroup>
+            <optgroup label="Рыба и морепродукты">
+                <option value="752">-Рыба</option>
+                <option value="1749">-Рыбные консервы и пресервы</option>
+                <option value="851">-Икра</option>
+                <option value="1750">-Крабовые палочки</option>
+                <option value="1751">-Кальмары / Осьминоги</option>
+                <option value="775">-Креветки</option>
+            </optgroup>
+            <optgroup label="Овощи / Фрукты / Ягоды">
+                <option value="566">-Свежие овощи / Зелень</option>
+                <option value="2037">-Фрукты / Ягоды</option>
+                <option value="89">-Консервированные овощи</option>
+                <option value="1743">-Оливки / Маслины</option>
+                <option value="1742">-Варенья / Джемы</option>
+            </optgroup>
+            <optgroup label="Кондитерские изделия / Хлеб">
+                <option value="150">-Торты / Пирожные / Десерты</option>
+                <option value="1747">-Сдобные изделия / Выпечка</option>
+                <option value="186">-Печенье / Вафли</option>
+                <option value="108">-Шоколадные батончики / Шоколадные плитки</option>
+                <option value="24">-Конфеты / Сладости</option>
+                <option value="346">-Жевательные резинки / Освежающие конфеты</option>
+                <option value="428">-Хлебобулочные изделия</option>
+            </optgroup>
+        </select>
+
+
+        <div class="checkboxes">
+            <h3>jQuery</h3>
+            <label>
+                <input type="checkbox">Unchecked checkbox
+            </label>
+            <label>
+                <input type="checkbox" checked>Checked checkbox
+            </label>
+            <label>
+                <input type="checkbox" disabled>Disabled checkbox
+            </label>
+            <label>
+                <input type="checkbox" checked disabled>Checked and disabled checkbox
+            </label>
+        </div>
+
+
+        <div class="css_checkboxes">
+            <h3>CSS</h3>
+            <label>
+                <input type="checkbox"><span></span> Unchecked checkbox
+            </label>
+            <label>
+                <input type="checkbox" checked><span></span> Checked checkbox
+            </label>
+            <label>
+                <input type="checkbox" disabled><span></span> Disabled checkbox
+            </label>
+        </div>
+    </form>
     <div class="jcarousel-wrapper">
         <div class="jcarousel">
             <ul>
@@ -61,9 +221,11 @@
                 <li><img src="images/03.jpg" alt="" width="800px" height="450px"></li>
             </ul>
         </div>
-        <a class="jcarousel-prev" href="#">‹</a>
-        <a class="jcarousel-next" href="#">›</a>
+        <a class="jcarousel-prev jcarousel-nav" href="#">‹</a>
+        <a class="jcarousel-next jcarousel-nav" href="#">›</a>
     </div>
+
+
 </div>
 </body>
 </html>

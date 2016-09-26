@@ -141,3 +141,194 @@ body {
     background:#00CC66;
 }
 
+.menu {
+    width: 100%;
+    background-color: #ff6464;
+}
+
+.menu li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu_item {
+    display: inline-block;
+    position: relative;
+    position: relative;
+}
+
+.menu_item>a {
+    display: block;
+    padding: 20px 30px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.expanded:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+    border: 6px solid transparent;
+    border-left: 12px solid white;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #e14b4b;
+    z-index: 2;
+}
+
+.submenu_item:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    border: 6px solid transparent;
+    border-left: 12px solid white;
+}
+
+.submenu>li {
+    padding: 0px 10px;
+}
+
+.submenu>li>a {
+    display: block;
+    padding: 10px 0px;
+    width: 150px;
+    border-bottom: 1px solid #c83232;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu_item {
+    position: relative;
+}
+
+.submenu_item>.submenu {
+    position: absolute;
+    top: 0px;
+    left: 170px;
+}
+
+.select-and-checkbox {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.my-select, .checkboxes, .css_checkboxes {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.my-select {
+    width: 300px;
+}
+
+h3 {
+    text-align: center;
+    color: green;
+}
+
+/*jQuery checkboxes*/
+.checkboxes {
+    margin-left: 5px;
+}
+
+.checkboxes label {
+    display: block;
+    margin: 10px;
+}
+
+/* iCheck plugin Square skin, red
+----------------------------------- */
+.icheckbox_square-red,
+.iradio_square-red {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 5px;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(img/red.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-red {
+    background-position: 0 0;
+}
+.icheckbox_square-red.hover {
+    background-position: -24px 0;
+}
+.icheckbox_square-red.checked {
+    background-position: -48px 0;
+}
+.icheckbox_square-red.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+.icheckbox_square-red.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-red {
+    background-position: -120px 0;
+}
+.iradio_square-red.hover {
+    background-position: -144px 0;
+}
+.iradio_square-red.checked {
+    background-position: -168px 0;
+}
+.iradio_square-red.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+.iradio_square-red.checked.disabled {
+    background-position: -216px 0;
+}
+
+
+/*CSS checkboxes*/
+.css_checkboxes {
+    margin-left: 10px;
+}
+
+.css_checkboxes input {
+    display: none;
+}
+
+.css_checkboxes label {
+    display: block;
+    margin: 10px;
+}
+
+.css_checkboxes input+span {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    width: 31px;
+    height: 31px;
+    background: url(img/polaris.png) 0 0 no-repeat;
+    cursor: pointer;
+}
+
+.css_checkboxes input[type="checkbox"]:checked + span {
+    background-position: -62px 0;
+}
+
+.css_checkboxes input[type="checkbox"]:disabled + span {
+    background-position: -93px 0;
+}
+
+.css_checkboxes span:hover {
+    background-position: -31px 0;
+}
+

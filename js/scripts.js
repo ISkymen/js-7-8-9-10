@@ -11,6 +11,31 @@ $(function () {
     }
   });
 
+  //jQuery menu
+  $(function() {
+    $('.menu_item').hover(
+      function() {
+        $(this).children('.submenu').stop(true, true).slideDown();
+      },
+      function() {
+        $(this).children('.submenu').stop(true, true).slideUp();
+      }
+    );
+
+    $('.submenu_item').hover(
+      function() {
+        $(this).children('.submenu').stop(true, true).fadeIn();
+      },
+      function() {
+        $(this).children('.submenu').stop(true, true).fadeOut();
+      }
+    );
+  });
+
+  $(".jcarousel-nav").click(function (event) {
+    event.preventDefault();
+  });
+
   $('.jcarousel-prev').click(function () {
     $('.jcarousel').jcarousel('scroll', '-=1');
   });
@@ -21,6 +46,16 @@ $(function () {
 
   $('.tabs').myTabs();
   $('.form').myForm();
+  $(".my-select").select2();
+
+  //iCheck
+
+    $('.checkboxes input').iCheck({
+      checkboxClass: 'icheckbox_square-red',
+      radioClass: 'iradio_square-red',
+      increaseArea: '20%'
+    });
+
 
 });
 
@@ -60,7 +95,6 @@ jQuery.fn.myForm = function (options) {
   var inputsLenght = inputs.length;
   var i=0;
   var el;
-  console.log(inputs.first);
   for (i=0; i<inputsLenght; i++) {
     el = inputs.eq(i);
     var hint = [];
@@ -70,12 +104,27 @@ jQuery.fn.myForm = function (options) {
       .html(el.attr('title'))
       .hide();
     el.after(hint[i]);
-    console.log(hint[i]);
     el.hover(
       function() {
         $(this).siblings('.form__hint').eq(0).fadeToggle("linear");
       }
+
     );
+    el.focusin(
+      function() {
+        $(this).siblings('.form__hint').eq(0).show("linear");
+      }
+
+    );
+
+    el.focusout(
+      function() {
+        $(this).siblings('.form__hint').eq(0).hide("linear");
+      }
+
+    );
+
+
 
 
   }
@@ -83,5 +132,7 @@ jQuery.fn.myForm = function (options) {
 
 
 };
+
+
 
 
